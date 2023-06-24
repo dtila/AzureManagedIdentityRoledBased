@@ -20,23 +20,21 @@ namespace Fleet
         private readonly TokenCredential _tokenCredential;
         private AccessToken _cachedToken;
         private readonly string _scope;
-        private readonly ILogger<ManagedIdentityAuthenticationDelegationHandler> _logger;
 
-        public ManagedIdentityAuthenticationDelegationHandler(string scope, string tenantId, ILogger<ManagedIdentityAuthenticationDelegationHandler> logger) 
-            : this (scope, new DefaultAzureCredential(new DefaultAzureCredentialOptions { VisualStudioCodeTenantId = tenantId }), logger)
+        public ManagedIdentityAuthenticationDelegationHandler(string scope, string tenantId) 
+            : this (scope, new DefaultAzureCredential(new DefaultAzureCredentialOptions { VisualStudioCodeTenantId = tenantId }))
         {
         }
 
-        public ManagedIdentityAuthenticationDelegationHandler(string scope, ILogger<ManagedIdentityAuthenticationDelegationHandler> logger)
-          : this(scope, new DefaultAzureCredential(new DefaultAzureCredentialOptions { VisualStudioCodeTenantId = TenantId }), logger)
+        public ManagedIdentityAuthenticationDelegationHandler(string scope, )
+          : this(scope, new DefaultAzureCredential(new DefaultAzureCredentialOptions { VisualStudioCodeTenantId = TenantId }))
         {
         }
 
-        public ManagedIdentityAuthenticationDelegationHandler(string scope, TokenCredential credentialSource, ILogger<ManagedIdentityAuthenticationDelegationHandler> logger)
+        public ManagedIdentityAuthenticationDelegationHandler(string scope, TokenCredential credentialSource)
         {
             _tokenCredential = credentialSource ?? throw new ArgumentNullException(nameof(credentialSource));
             _scope = scope ?? throw new ArgumentNullException(nameof(scope));
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -62,7 +60,6 @@ namespace Fleet
             if (string.IsNullOrEmpty(_cachedToken.Token) || force)
             {
                 _cachedToken = await GetTokenAsync(cancellationToken);
-                _logger.LogInformation("Generated MSI token: ", _cachedToken.Token);
             }
 
             request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", _cachedToken.Token);

@@ -7,7 +7,6 @@ namespace Server.Controllers
     [Authorize(Roles = "Administrators")]
     [ApiController]
     [Route("[controller]")]
-    //[RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class AccountController : ControllerBase
     {
         private readonly ILogger<AccountController> _logger;
