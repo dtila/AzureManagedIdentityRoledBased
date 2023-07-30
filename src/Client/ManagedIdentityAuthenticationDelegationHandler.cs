@@ -26,7 +26,7 @@ namespace Fleet
         {
         }
 
-        public ManagedIdentityAuthenticationDelegationHandler(string scope, )
+        public ManagedIdentityAuthenticationDelegationHandler(string scope)
           : this(scope, new DefaultAzureCredential(new DefaultAzureCredentialOptions { VisualStudioCodeTenantId = TenantId }))
         {
         }

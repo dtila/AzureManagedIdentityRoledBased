@@ -13,7 +13,7 @@ builder.Services
     {
         client.BaseAddress = new Uri("https://azuremanagedserver.azurewebsites.net");
     })
-    .AddHttpMessageHandler(sp => new ManagedIdentityAuthenticationDelegationHandler("api://AzureManagedServer/.default", sp.GetRequiredService<ILogger<ManagedIdentityAuthenticationDelegationHandler>>()));
+    .AddHttpMessageHandler(sp => new ManagedIdentityAuthenticationDelegationHandler("api://AzureManagedServer/.default"));
 
 var app = builder.Build();
 
