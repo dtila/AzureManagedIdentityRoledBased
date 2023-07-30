@@ -1,5 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2023-06-24T09:16:42.368Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0" etag="5W0g9o7vLSZZVfV8lV09" version="21.5.0" type="github">
-  <diagram name="System" id="i_En7mrkE44FDxEYOter">
+<mxfile host="app.diagrams.net" modified="2023-06-24T11:27:28.361Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0" etag="bOPrERQvxQwKmIKTG7Mo" version="21.5.0" type="github" pages="2">
+  <diagram id="mf1_24pirNJDJnmBQIZF" name="System">
+    <mxGraphModel dx="1386" dy="1296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oyqHgWKHyaxoz4EY2Qdg-1" value="&lt;div&gt;Azure Cloud&lt;br&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="50" width="410" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="LxvifpomA6Tm0CeSc9nq-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="oyqHgWKHyaxoz4EY2Qdg-2" target="oyqHgWKHyaxoz4EY2Qdg-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oyqHgWKHyaxoz4EY2Qdg-2" value="Client Web App" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="230" y="140" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LxvifpomA6Tm0CeSc9nq-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="oyqHgWKHyaxoz4EY2Qdg-5" target="oyqHgWKHyaxoz4EY2Qdg-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oyqHgWKHyaxoz4EY2Qdg-5" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="135" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oyqHgWKHyaxoz4EY2Qdg-17" value="Server Web App" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="440" y="140" width="110" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Authorization Flow" id="i_En7mrkE44FDxEYOter">
     <mxGraphModel dx="1386" dy="1296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
